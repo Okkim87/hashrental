@@ -3,81 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hashrate Rent</title>
+<title>HashRental</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#0b1220;color:#fff;font-family:Arial,sans-serif}
-header{background:#121b2d;padding:18px 24px;border-bottom:3px solid #f59e0b;position:sticky;top:0}
+body{margin:0;font-family:Arial,sans-serif;background:#0b1120;color:#fff}
+header{background:#131c30;border-bottom:3px solid #f59e0b;padding:18px 24px;position:sticky;top:0}
 header h1{margin:0;color:#f59e0b}
 .wrap{max-width:1200px;margin:auto;padding:20px}
-.hero{text-align:center;padding:40px 20px}
-.hero h2{font-size:42px;margin:0}
-.hero p{color:#cbd5e1}
-.btn{display:inline-block;background:#f59e0b;color:#111;padding:14px 24px;border-radius:10px;text-decoration:none;font-weight:bold}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.card{background:#182338;padding:18px;border-radius:14px;border:1px solid #26344f}
-.price{font-size:30px;color:#22c55e;font-weight:bold}
-small{color:#94a3b8}
+.hero{text-align:center;padding:60px 10px}
+.hero h2{font-size:44px;margin:0}
+.hero p{color:#cbd5e1;font-size:20px}
+.btn{display:inline-block;margin:8px;padding:14px 26px;background:#f59e0b;color:#111;text-decoration:none;border-radius:10px;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:#182338;border:1px solid #2f3d5d;border-radius:14px;padding:18px}
+.badge{display:inline-block;background:#14532d;padding:4px 10px;border-radius:20px;font-size:13px}
 table{width:100%;border-collapse:collapse}
-th,td{padding:10px;border-bottom:1px solid #334155;text-align:left}
-footer{text-align:center;padding:30px;color:#94a3b8}
-input{width:100%;padding:10px;border-radius:8px;border:1px solid #475569;background:#0b1220;color:white}
-button{background:#f59e0b;border:none;padding:12px 18px;border-radius:8px;font-weight:bold;cursor:pointer;margin-top:10px}
+th,td{padding:12px;border-bottom:1px solid #334155;text-align:left}
+footer{text-align:center;color:#94a3b8;padding:30px}
 </style>
 </head>
 <body>
-<header><h1>⚡ Hashrate Rent</h1></header>
+<header><h1>⚡ HashRental</h1></header>
 
 <div class="wrap">
 
 <section class="hero">
-<h2>Rent SHA-256 Hashrate</h2>
-<p>720 hour rentals. Powered by real ASIC miners.</p>
-<a class="btn" href="#plans">View Plans</a>
+<h2>Rent Real Bitcoin Hashrate</h2>
+<p>Real SHA-256 ASIC miners. Fixed 720-hour rentals. Instant activation.</p>
+<a class="btn" href="#plans">Rent Hashrate</a>
+<a class="btn" href="#how">How it Works</a>
 </section>
 
-<h2 id="plans">Available Packages</h2>
-
+<h2>Live Capacity</h2>
 <div class="grid">
-
-<div class="card"><h3>Bitaxe Gamma</h3><div class="price">1.2 TH/s</div><p>Duration: 720 Hours</p><small>SHA-256</small><br><br><a class="btn" href="#">Rent Now</a></div>
-
-<div class="card"><h3>Bitaxe Gamma Duo</h3><div class="price">2.4 TH/s</div><p>Duration: 720 Hours</p><small>SHA-256</small><br><br><a class="btn" href="#">Rent Now</a></div>
-
-<div class="card"><h3>Bitaxe Gamma Quad</h3><div class="price">4.8 TH/s</div><p>Duration: 720 Hours</p><small>SHA-256</small><br><br><a class="btn" href="#">Rent Now</a></div>
-
-<div class="card"><h3>Antminer S19</h3><div class="price">95 TH/s</div><p>Duration: 720 Hours</p><small>SHA-256</small><br><br><a class="btn" href="#">Rent Now</a></div>
-
-<div class="card"><h3>Antminer S19 Pro</h3><div class="price">110 TH/s</div><p>Duration: 720 Hours</p><small>SHA-256</small><br><br><a class="btn" href="#">Rent Now</a></div>
-
-<div class="card"><h3>Antminer S21</h3><div class="price">200 TH/s</div><p>Duration: 720 Hours</p><small>SHA-256</small><br><br><a class="btn" href="#">Rent Now</a></div>
-
-<div class="card"><h3>Antminer S21 XP</h3><div class="price">270 TH/s</div><p>Duration: 720 Hours</p><small>SHA-256</small><br><br><a class="btn" href="#">Rent Now</a></div>
-
+<div class="card"><h3>Available</h3><h2>1.42 PH/s</h2></div>
+<div class="card"><h3>Rented</h3><h2>0.58 PH/s</h2></div>
+<div class="card"><h3>Algorithm</h3><h2>SHA-256</h2></div>
+<div class="card"><h3>Rental Period</h3><h2>720 Hours</h2></div>
 </div>
 
-<h2>Why choose us?</h2>
+<h2 id="plans">Available Packages</h2>
 <table>
-<tr><th>Algorithm</th><td>SHA-256</td></tr>
-<tr><th>Rental Time</th><td>720 Hours</td></tr>
-<tr><th>Delivery</th><td>Instant after payment</td></tr>
-<tr><th>Support</th><td>24/7 Email</td></tr>
+<tr><th>Miner</th><th>Hashrate</th><th>Status</th></tr>
+<tr><td>Bitaxe Gamma</td><td>1.2 TH/s</td><td><span class="badge">Available</span></td></tr>
+<tr><td>Bitaxe Gamma Duo</td><td>2.4 TH/s</td><td><span class="badge">Available</span></td></tr>
+<tr><td>Bitaxe Gamma Quad</td><td>4.8 TH/s</td><td><span class="badge">Available</span></td></tr>
+<tr><td>Antminer S19</td><td>95 TH/s</td><td><span class="badge">Limited</span></td></tr>
+<tr><td>Antminer S21</td><td>200 TH/s</td><td><span class="badge">Sold Out</span></td></tr>
 </table>
 
-<footer>
-Hashrate Rent © 2026
-</footer>
-
+<h2>Network</h2>
+<div class="grid">
+<div class="card"><h3>BTC Price</h3><p>Live API (coming soon)</p></div>
+<div class="card"><h3>Network Difficulty</h3><p>Live API (coming soon)</p></div>
+<div class="card"><h3>Online Miners</h3><p>24</p></div>
+<div class="card"><h3>Active Rentals</h3><p>18</p></div>
 </div>
 
-<script>
-function calc(){
-let b=parseFloat(document.getElementById('buy').value)||0;
-let m=parseFloat(document.getElementById('markup').value)||0;
-let s=b*(1+m/100);
-document.getElementById('sell').innerHTML='Suggested selling price: €'+s.toFixed(2);
-document.getElementById('profit').innerHTML='Profit: €'+(s-b).toFixed(2);
-}
-calc();
-</script>
+<h2 id="how">How it Works</h2>
+<ol>
+<li>Select a hashrate package.</li>
+<li>Complete payment.</li>
+<li>Your rental activates automatically.</li>
+<li>Mining runs for 720 hours.</li>
+</ol>
+
+<h2>FAQ</h2>
+<p><b>What algorithm is supported?</b><br>SHA-256 only.</p>
+<p><b>When does my rental start?</b><br>Immediately after activation.</p>
+<p><b>Can I extend my rental?</b><br>Extension support is planned.</p>
+
+<footer>© 2026 HashRental</footer>
+</div>
 </body>
 </html>
