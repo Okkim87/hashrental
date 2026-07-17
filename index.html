@@ -1,75 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HashRental</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#0b1120;color:#fff}
-header{background:#131c30;border-bottom:3px solid #f59e0b;padding:18px 24px}
-header h1{margin:0;color:#f59e0b}
-.wrap{max-width:1200px;margin:auto;padding:20px}
-.hero{text-align:center;padding:50px 10px}
-.hero h2{font-size:42px;margin:0}
-.hero p{color:#cbd5e1}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.card{background:#182338;border:1px solid #30405f;border-radius:14px;padding:20px}
-.btn{display:inline-block;margin-top:12px;padding:12px 22px;background:#f59e0b;color:#111;text-decoration:none;border-radius:8px;font-weight:bold}
-small{color:#94a3b8}
-</style>
-</head>
-<body>
-<header><h1>⚡ HashRental</h1></header>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HashRental</title><style>
+body{margin:0;background:#0b1120;color:#fff;font-family:Arial}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:#131c30;border-bottom:3px solid #f59e0b}
 
+nav{display:flex;gap:18px;align-items:center}
+nav a{color:#fff;text-decoration:none;font-weight:bold}
+nav a:hover{color:#f59e0b}
+
+.wrap{max-width:1100px;margin:auto;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:#182338;padding:18px;border-radius:12px}
+.btn{display:inline-block;background:#f59e0b;color:#111;padding:10px 18px;text-decoration:none;border-radius:8px;font-weight:bold}
+</style></head><body>
+<header><h2 style="color:#f59e0b;margin:0;">⚡ HashRental</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="#packages">Packages</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="#">Login</a>
+</nav>
+</header>
 <div class="wrap">
-
-<section class="hero">
-<h2>Rent Real Bitcoin Hashrate</h2>
-<p>Real SHA-256 ASIC miners • Fixed 720-hour rentals • Instant activation</p>
-</section>
-
-<h2>Available Packages</h2>
-
+<h1>Rent Real Bitcoin Hashrate</h1>
+<p>Professional SHA-256 hashrate rentals.</p>
+<h2 id="packages">Packages</h2>
 <div class="grid">
-
-<div class="card">
-<h3>Bitaxe Gamma</h3>
-<h2>1.2 TH/s</h2>
-<p>720 Hours</p>
-<small>SHA-256</small><br>
-<a class="btn" href="bitaxe-gamma.html">View Package</a>
-</div>
-
-<div class="card">
-<h3>Bitaxe Gamma Duo</h3>
-<h2>2.4 TH/s</h2>
-<p>720 Hours</p>
-<small>Coming Soon</small>
-</div>
-
-<div class="card">
-<h3>Bitaxe Gamma Quad</h3>
-<h2>4.8 TH/s</h2>
-<p>720 Hours</p>
-<small>Coming Soon</small>
-</div>
-
-<div class="card">
-<h3>Antminer S19</h3>
-<h2>95 TH/s</h2>
-<p>720 Hours</p>
-<small>Coming Soon</small>
-</div>
-
-<div class="card">
-<h3>Antminer S21</h3>
-<h2>200 TH/s</h2>
-<p>720 Hours</p>
-<small>Coming Soon</small>
-</div>
-
-</div>
-
-</div>
-</body>
-</html>
+<div class="card"><h3>Bitaxe Gamma</h3><p>1.2 TH/s • 720 Hours</p><a class="btn" href="bitaxe-gamma.html">View Package</a></div>
+<div class="card"><h3>Bitaxe Gamma Duo</h3><p>Coming Soon</p></div>
+<div class="card"><h3>Antminer S19</h3><p>Coming Soon</p></div>
+</div></div></body></html>

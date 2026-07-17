@@ -1,70 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bitaxe Gamma | HashRental</title>
-<style>
-body{margin:0;background:#0b1120;color:#fff;font-family:Arial,sans-serif}
-header{background:#131c30;padding:18px 24px;border-bottom:3px solid #f59e0b}
-header a{color:#f59e0b;text-decoration:none;font-weight:bold}
-.wrap{max-width:1100px;margin:auto;padding:24px}
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-@media(max-width:800px){.hero{grid-template-columns:1fr}}
-.card{background:#182338;border:1px solid #2d3d5c;border-radius:14px;padding:20px}
-.price{font-size:38px;color:#22c55e;font-weight:bold}
-.btn{display:inline-block;background:#f59e0b;color:#111;text-decoration:none;padding:14px 24px;border-radius:10px;font-weight:bold}
-table{width:100%;border-collapse:collapse;margin-top:10px}
-td{padding:10px;border-bottom:1px solid #334155}
-ul{line-height:1.8}
-</style>
-</head>
-<body>
-<header><a href="index.html">← Back to HashRental</a></header>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bitaxe Gamma</title><style>
+body{margin:0;background:#0b1120;color:#fff;font-family:Arial}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:#131c30;border-bottom:3px solid #f59e0b}
 
-<div class="wrap">
-<div class="hero">
-<div class="card">
+nav{display:flex;gap:18px;align-items:center}
+nav a{color:#fff;text-decoration:none;font-weight:bold}
+nav a:hover{color:#f59e0b}
+
+.wrap{max-width:900px;margin:auto;padding:20px}
+.btn{display:inline-block;background:#f59e0b;color:#111;padding:10px 18px;text-decoration:none;border-radius:8px;font-weight:bold}
+.card{background:#182338;padding:20px;border-radius:12px}
+</style></head><body>
+<header><h2 style="color:#f59e0b;margin:0;">⚡ HashRental</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="#packages">Packages</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="#">Login</a>
+</nav>
+</header>
+<div class="wrap"><div class="card">
 <h1>Bitaxe Gamma</h1>
-<p>Rent dedicated SHA-256 hashrate powered by a real Bitaxe Gamma miner.</p>
-
-<div class="price">1.2 TH/s</div>
-<p><strong>Rental period:</strong> 720 Hours</p>
-<p><strong>Status:</strong> 🟢 Available</p>
-
-<p><a class="btn" href="#">Rent Now</a></p>
-</div>
-
-<div class="card">
-<h2>Specifications</h2>
-<table>
-<tr><td>Algorithm</td><td>SHA-256</td></tr>
-<tr><td>Hashrate</td><td>1.2 TH/s</td></tr>
-<tr><td>Rental Length</td><td>720 Hours</td></tr>
-<tr><td>Activation</td><td>Automatic after payment</td></tr>
-<tr><td>Monitoring</td><td>24/7</td></tr>
-</table>
-</div>
-</div>
-
-<div class="card" style="margin-top:24px">
-<h2>What you get</h2>
-<ul>
-<li>Dedicated hashrate for the full rental period.</li>
-<li>Automatic activation after payment.</li>
-<li>Stable SHA-256 mining.</li>
-<li>Professional hosting and monitoring.</li>
-<li>Email support.</li>
-</ul>
-</div>
-
-<div class="card" style="margin-top:24px">
-<h2>FAQ</h2>
-<p><b>When does the rental start?</b><br>Immediately after payment and activation.</p>
-<p><b>Can I rent multiple packages?</b><br>Yes, subject to available capacity.</p>
-<p><b>Can I renew my rental?</b><br>Renewal support is planned.</p>
-</div>
-
-</div>
-</body>
-</html>
+<p><b>Hashrate:</b> 1.2 TH/s</p>
+<p><b>Algorithm:</b> SHA-256</p>
+<p><b>Rental:</b> 720 Hours</p>
+<a class="btn" href="#">Rent Now</a>
+</div></div></body></html>
