@@ -1,0 +1,10 @@
+{
+  "name":"HashRental",
+  "short_name":"HashRental",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#060608",
+  "theme_color":"#0b0b0f",
+  "description":"Rent a Bitaxe Gamma — Hosted Bitcoin mining hardware by Nordhash Oy",
+  "icons":[{"src":"/favicon.ico","sizes":"64x64 32x32 24x24 16x16","type":"image/x-icon"}]
+}
