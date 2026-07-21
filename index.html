@@ -442,5 +442,41 @@
       }
     })();
   </script>
+  <script>
+const RENTALS_OPEN = true; // true = Available, false = SOLD OUT
+
+if (!RENTALS_OPEN) {
+
+  // Vaihda kaikki vuokrapainikkeet SOLD OUT -tilaan
+  document.querySelectorAll('a[href*="pay.sumup.com"]').forEach(btn => {
+    btn.textContent = "❌ SOLD OUT";
+    btn.removeAttribute("href");
+    btn.removeAttribute("target");
+    btn.style.pointerEvents = "none";
+    btn.style.opacity = "1";
+    btn.style.background = "#d32f2f";
+    btn.style.boxShadow = "none";
+    btn.style.cursor = "not-allowed";
+  });
+
+  // Vaihda yläbanneri
+  document.querySelectorAll(".banner--scarce").forEach(banner => {
+    banner.textContent = "❌ Currently Unavailable";
+    banner.style.background = "#d32f2f";
+  });
+
+  // Piilota Configure My Miner -painikkeet
+  document.querySelectorAll(".configure-btn").forEach(btn => {
+    btn.style.display = "none";
+  });
+
+  // Muuta ilmoitustekstit
+  document.querySelectorAll(".payment-notice").forEach(note => {
+    note.innerHTML = "This Bitaxe Gamma is currently rented.<br>Please check back later.";
+    note.style.color = "#fff";
+  });
+
+}
+  </script>
 </body>
 </html>
