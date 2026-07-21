@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HashRental - Miner Setup</title>
+<style>
+:root{--bg:#07090d;--card:#11161d;--border:#2a3440;--text:#eef4ff;--muted:#9fb0c4;--accent:#3b82f6}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(#07090d,#10151d);font-family:system-ui;color:var(--text)}
+.wrap{max-width:900px;margin:auto;padding:24px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+h1{margin-top:0}
+p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column}
+label{font-weight:700;margin-bottom:6px}
+input,textarea{background:#0d1218;border:1px solid #394454;border-radius:12px;color:#fff;padding:13px;font-size:15px}
+input:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.2)}
+textarea{min-height:120px}
+.full{grid-column:1/-1}
+button{margin-top:20px;width:100%;padding:15px;border:0;border-radius:12px;background:var(--accent);color:#fff;font-size:16px;font-weight:700;cursor:pointer}
+.small{font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+<h1>Miner Setup</h1>
+<p>Complete this form after payment to activate your Bitaxe Gamma.</p>
+
+<form id="setupForm" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="15ff358a-31fe-461c-ab43-7c9e1709496b">
+<input type="hidden" name="subject" value="HashRental Miner Setup">
+<textarea name="message" id="message" hidden></textarea>
+
+<div class="grid">
+<div class="field"><label>Full name *</label><input name="name" required></div>
+<div class="field"><label>Email *</label><input type="email" name="email" required></div>
+<div class="field"><label>Order ID</label><input id="order"></div>
+<div class="field"><label>Mining Pool</label><input id="pool"></div>
+<div class="field"><label>Pool URL</label><input id="poolurl"></div>
+<div class="field"><label>Worker Name</label><input id="worker"></div>
+<div class="field"><label>Worker Password</label><input id="password"></div>
+<div class="field"><label>Bitcoin Wallet</label><input id="wallet"></div>
+<div class="field full"><label>Additional Notes</label><textarea id="notes"></textarea></div>
+</div>
+
+<button type="submit">Activate Miner</button>
+<p class="small">Your Bitcoin rewards are always paid directly to your own wallet.</p>
+</form>
+</div></div>
+
+<script>
+document.getElementById('setupForm').addEventListener('submit',function(){
+document.getElementById('message').value=
+`Order ID: ${order.value}
+
+Mining Pool: ${pool.value}
+
+Pool URL: ${poolurl.value}
+
+Worker: ${worker.value}
+
+Worker Password: ${password.value}
+
+Bitcoin Wallet: ${wallet.value}
+
+Notes:
+${notes.value}`;
+});
+</script>
+</body>
+</html>
