@@ -80,7 +80,7 @@
     .nav-links a{padding:.4rem .7rem;border-radius:10px}
     .cta{display:inline-flex;gap:.5rem;align-items:center}
     .btn{
-      display:inline-block;padding:.6rem 1rem;border-radius:10px;font-weight:700;background:linear-gradient(180deg,#1b6cff,#4d8bff);color:white;border:none;box-shadow:0 6px 18px rgba(13,54,122,0.35)
+      display:inline-block;padding:.6rem 1rem;border-radius:10px;font-weight:700;background:linear-gradient(180deg,#1b6cff,#4d8bff);color:white;border:none;box-shadow:0 6px 18px rgba(13,54,122,0.3[...]
     }
     .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
     :focus-visible{outline:3px solid rgba(138,180,255,0.28);outline-offset:3px;border-radius:8px}
@@ -90,21 +90,21 @@
     .hero-grid{display:grid;gap:1.2rem}
     .title{font-size:clamp(1.6rem,5vw,2.8rem);line-height:1.02;margin:0;font-weight:700}
     .subtitle{color:var(--muted);margin-top:.6rem;font-size:1rem}
-    .banner{display:inline-block;padding:.45rem .8rem;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));border:1px solid var(--glass-border);font-weight:700;color:#f1f6ff}
+    .banner{display:inline-block;padding:.45rem .8rem;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));border:1px solid var(--glass-border);font-[...]
     .banner--scarce{background: linear-gradient(90deg,#ff7043,#ff8a00);color: #fff;border: 1px solid rgba(255,255,255,0.06);box-shadow: 0 6px 18px rgba(255,120,50,0.06);font-weight:800}
 
     .cards{display:grid;gap:1rem;margin-top:1.2rem}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:1rem;border:1px solid var(--glass-border);box-shadow:0 8px 30px rgba(0,0,0,0.6);backdrop-filter: blur(8px);}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:1rem;border:1px solid var(--glass-border);box-shadow:0 8px 30px rgb[...]
 
     .plans{display:grid;gap:.9rem}
-    .plan{display:flex;flex-direction:column;gap:.6rem;padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));}
+    .plan{display:flex;flex-direction:column;gap:.6rem;padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255[...]
 
     .specs{display:flex;flex-wrap:wrap;gap:.6rem;color:var(--muted);font-size:.95rem}
     .price-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem}
     .price-card{background:var(--badge-bg);padding:.5rem .75rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03);font-weight:700}
 
     .badges{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.8rem}
-    .badge{background:rgba(0,0,0,0.35);padding:.45rem .7rem;border-radius:999px;border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-weight:600;display:inline-flex;align-items:center;gap:.5rem}
+    .badge{background:rgba(0,0,0,0.35);padding:.45rem .7rem;border-radius:999px;border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-weight:600;display:inline-flex;align-items:center;g[...]
 
     .rental-actions{display:flex;flex-direction:column;gap:.6rem;align-items:center}
     .rent-row{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
@@ -114,11 +114,22 @@
       .rent-row{justify-content:space-between}
     }
 
-    .payment-notice{margin-top:.6rem;color:#ffd9b3;background:linear-gradient(180deg,rgba(255,245,230,0.02),rgba(255,240,220,0.01));padding:.6rem;border-radius:10px;border:1px solid rgba(255,160,80,0.04);font-weight:700}
+    .payment-notice{margin-top:.6rem;color:#ffd9b3;background:linear-gradient(180deg,rgba(255,245,230,0.02),rgba(255,240,220,0.01));padding:.6rem;border-radius:10px;border:1px solid rgba(255,160,[...]
 
     .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
     .reveal.visible{opacity:1;transform:none}
     @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
+
+    /* Mobile menu CSS */
+    .mobile-menu{display:none;flex-direction:column;gap:.6rem}
+    .menu-toggle{display:none;background:none;border:none;color:var(--accent);font-size:1.2rem;cursor:pointer;padding:.4rem;font-weight:bold}
+    .menu-toggle:hover{opacity:0.8}
+
+    @media(max-width:719px){
+      .menu-toggle{display:block}
+      .nav-links{display:none}
+      .mobile-menu:not([hidden]){display:flex}
+    }
 
     /* Bitaxe Gamma card: image layout */
     .bitaxe-card {
@@ -167,6 +178,7 @@
             <li><a href="index.html#plans">Rental Plans</a></li>
             <li><a href="index.html#specs">Specs</a></li>
             <li><a href="index.html#how">How it works</a></li>
+            <li><a href="learn.html">Learn</a></li>
             <li><a href="terms.html">Terms</a></li>
           </ul>
         </nav>
@@ -178,6 +190,7 @@
         <a href="index.html#plans">Rental Plans</a>
         <a href="index.html#specs">Specs</a>
         <a href="index.html#how">How it works</a>
+        <a href="learn.html">Learn</a>
         <a href="terms.html">Terms</a>
       </div>
     </div>
@@ -366,12 +379,12 @@
 
         <details style="margin-top:.6rem">
           <summary>What happens if the hardware fails?</summary>
-          <div class="muted-small" style="margin-top:.6rem">We offer 24/7 monitoring. If hardware fails, we will attempt repair or replacement as capacity allows; refunds are subject to our Refund Policy.</div>
+          <div class="muted-small" style="margin-top:.6rem">We offer 24/7 monitoring. If hardware fails, we will attempt repair or replacement as capacity allows; refunds are subject to our Refun[...]
         </details>
       </div>
     </section>
 
-    <section class="cta-full reveal" role="region" aria-label="Call to action" style="margin-top:1.6rem;padding:1.2rem;border-radius:12px;background:linear-gradient(180deg, rgba(75,75,85,0.18), rgba(25,25,30,0.12));text-align:center;border:1px solid rgba(255,255,255,0.03)">
+    <section class="cta-full reveal" role="region" aria-label="Call to action" style="margin-top:1.6rem;padding:1.2rem;border-radius:12px;background:linear-gradient(180deg, rgba(75,75,85,0.18), r[...]
       <h3>Ready to start mining?</h3>
       <p class="muted-small">Rent real Bitcoin mining hardware today.</p>
 
@@ -418,7 +431,7 @@
   </footer>
 
   <script>
-    // Mobile menu - retained
+    // Mobile menu
     (function(){
       const toggle = document.getElementById('menuToggle');
       const menu = document.getElementById('mobile-menu');
