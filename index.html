@@ -168,6 +168,16 @@
       .product-image img { width: 180px; max-width:100%; }
       .coming-soon-badge { position:static; margin-bottom:.6rem; }
     }
+
+    /* Live Miner Status Grid */
+    .status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.8rem;margin-top:1rem}
+    @media(max-width:719px){
+      .status-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    .status-item{background:var(--badge-bg);padding:.8rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:.4rem}
+    .status-label{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+    .status-value{font-size:1.3rem;font-weight:700;color:#e6eef6;word-break:break-word}
+    .status-offline{color:#ff6b6b}
   </style>
 </head>
 <body>
@@ -289,7 +299,7 @@
                 </div>
 
                 <div class="product-image" aria-hidden="false">
-                  <img src="antminer-s9.png"
+                  <img src="antminer-s9.jpg"
      alt="Antminer S9 Bitcoin Miner"
      loading="lazy"
      width="560"
@@ -408,6 +418,43 @@
       </div>
     </section>
 
+    <section id="status" style="margin-top:1.2rem">
+      <div class="card reveal">
+        <h2 style="margin-top:0">🟢 Live Miner Status</h2>
+        <p class="muted-small">Real-time metrics from our hosted Bitaxe Gamma (refreshes every 60 seconds)</p>
+        <div class="status-grid">
+          <div class="status-item">
+            <div class="status-label">Status</div>
+            <div class="status-value" id="status-status">Loading...</div>
+          </div>
+          <div class="status-item">
+            <div class="status-label">Hashrate</div>
+            <div class="status-value" id="status-hashrate">Loading...</div>
+          </div>
+          <div class="status-item">
+            <div class="status-label">ASIC Temp</div>
+            <div class="status-value" id="status-asic-temp">Loading...</div>
+          </div>
+          <div class="status-item">
+            <div class="status-label">VRM Temp</div>
+            <div class="status-value" id="status-vrm-temp">Loading...</div>
+          </div>
+          <div class="status-item">
+            <div class="status-label">Power</div>
+            <div class="status-value" id="status-power">Loading...</div>
+          </div>
+          <div class="status-item">
+            <div class="status-label">Fan Speed</div>
+            <div class="status-value" id="status-fan-speed">Loading...</div>
+          </div>
+          <div class="status-item">
+            <div class="status-label">Uptime</div>
+            <div class="status-value" id="status-uptime">Loading...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="how" style="margin-top:1.2rem">
       <div class="card reveal">
         <h2 style="margin-top:0">How It Works</h2>
@@ -444,7 +491,7 @@
 
         <details style="margin-top:.6rem">
           <summary>What happens if the hardware fails?</summary>
-          <div class="muted-small" style="margin-top:.6rem">We offer 24/7 monitoring. If hardware fails, we will attempt repair or replacement as capacity allows; refunds are subject to our Refun[...]
+          <div class="muted-small" style="margin-top:.6rem">We offer 24/7 monitoring. If hardware fails, we will attempt repair or replacement as capacity allows; refunds are subject to our Refund Policy.</div>
         </details>
       </div>
     </section>
@@ -518,6 +565,45 @@
       } else {
         document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
       }
+    })();
+  </script>
+  <script>
+    // Live Miner Status - Fetch and refresh every 60 seconds
+    (function(){
+      function updateMinerStatus(){
+        fetch('status.json?' + Date.now())
+          .then(response => {
+            if(!response.ok) throw new Error('Failed to load status');
+            return response.json();
+          })
+          .then(data => {
+            document.getElementById('status-status').textContent = data.status || 'N/A';
+            document.getElementById('status-status').className = 'status-value' + (data.status === 'Online' ? '' : ' status-offline');
+            document.getElementById('status-hashrate').textContent = (data.hashrate || 'N/A') + ' TH/s';
+            document.getElementById('status-asic-temp').textContent = (data.asic_temp || 'N/A') + ' °C';
+            document.getElementById('status-vrm-temp').textContent = (data.vrm_temp || 'N/A') + ' °C';
+            document.getElementById('status-power').textContent = (data.power || 'N/A') + ' W';
+            document.getElementById('status-fan-speed').textContent = (data.fan_speed || 'N/A') + ' RPM';
+            document.getElementById('status-uptime').textContent = data.uptime || 'N/A';
+          })
+          .catch(error => {
+            console.log('Could not load status:', error);
+            document.getElementById('status-status').textContent = '🔴 Offline';
+            document.getElementById('status-status').className = 'status-value status-offline';
+            document.getElementById('status-hashrate').textContent = '—';
+            document.getElementById('status-asic-temp').textContent = '—';
+            document.getElementById('status-vrm-temp').textContent = '—';
+            document.getElementById('status-power').textContent = '—';
+            document.getElementById('status-fan-speed').textContent = '—';
+            document.getElementById('status-uptime').textContent = '—';
+          });
+      }
+      
+      // Update immediately on page load
+      updateMinerStatus();
+      
+      // Refresh every 60 seconds
+      setInterval(updateMinerStatus, 60000);
     })();
   </script>
   <script>
