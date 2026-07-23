@@ -384,7 +384,31 @@
   </div>  
 </section>  
 
-<section id="specs" style="margin-top:1.2rem">  
+<section id="specs" style="margin-top:1.2rem">
+  <section id="live-status" style="margin-top:1.2rem">
+  <div class="card reveal">
+    <h2 style="margin-top:0">🟢 Live Miner Status</h2>
+    <p class="muted-small">
+      Real-time metrics from our hosted Bitaxe Gamma.
+    </p>
+
+    <div id="minerGrid"
+         style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px">
+
+      <div class="price-card"><strong>Status</strong><br><span id="status">Loading...</span></div>
+      <div class="price-card"><strong>Hashrate</strong><br><span id="hashrate">-</span></div>
+      <div class="price-card"><strong>ASIC Temp</strong><br><span id="asicTemp">-</span></div>
+      <div class="price-card"><strong>VRM Temp</strong><br><span id="vrmTemp">-</span></div>
+      <div class="price-card"><strong>Power</strong><br><span id="power">-</span></div>
+      <div class="price-card"><strong>Fan</strong><br><span id="fan">-</span></div>
+      <div class="price-card"><strong>Uptime</strong><br><span id="uptime">-</span></div>
+      <div class="price-card"><strong>Accepted</strong><br><span id="accepted">-</span></div>
+      <div class="price-card"><strong>Rejected</strong><br><span id="rejected">-</span></div>
+      <div class="price-card"><strong>Error Rate</strong><br><span id="error">-</span></div>
+
+    </div>
+  </div>
+</section>
   <div class="card reveal">  
     <h2 style="margin-top:0">Technical Specifications</h2>  
     <p class="muted-small">Bitaxe Gamma</p>  
