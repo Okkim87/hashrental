@@ -1,13 +1,13 @@
 {
-  "accepted": 138916,
+  "accepted": 138923,
   "asicTemp": 56,
   "average": 1.35,
   "error": 0,
   "fan": 5197,
-  "hashrate": 1.37,
-  "power": 23.6,
+  "hashrate": 1.49,
+  "power": 23.7,
   "rejected": 118,
   "status": "Online",
   "uptime": "7d 2h",
-  "vrmTemp": 67
+  "vrmTemp": 68
 }
